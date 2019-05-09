@@ -21,9 +21,9 @@ footer-links:
   email: me@alexkubica.com
   facebook: alexkubicail
   flickr:
-  github: barryclark/jekyll-now
+  github: ak-il
   instagram: alexkubicail
-  linkedin:
+  linkedin: alex-kubica-7066ba121
   pinterest:
   rss: rss # just type anything here for a working RSS icon
   twitter: alexkubicail
@@ -37,7 +37,7 @@ footer-links:
 disqus: alexkubica
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-139934561-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
