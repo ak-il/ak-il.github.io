@@ -1,6 +1,6 @@
 # ak-il.github.io
 
-My personal blog based on [Left](https://github.com/holman/left).
+My personal blog.
 
 ## Licensing
 
