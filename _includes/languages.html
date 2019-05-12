@@ -1,0 +1,9 @@
+{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% for post in posts %}
+<a href="{{ post.url }}" class="{{ post.lang }}{% if page.lang==post.lang %} activeLang{% endif %}">{{ post.lang }}</a>
+{% endfor %}
+
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% for pagex in pages %}
+<a href="{{ pagex.url }}" class="{{ pagex.lang }}{% if page.lang==pagex.lang %} activeLang{% endif %}">{{ pagex.lang }}</a>
+{% endfor %}

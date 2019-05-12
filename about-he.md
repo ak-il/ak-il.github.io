@@ -1,13 +1,13 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: אודות
+permalink: /about-he/
 ref: about
-lang: English
+lang: עברית
 ---
 
 TODO
 
-### Contact me
+### צרו קשר
 
 [me@alexkubica.com](mailto:me@alexkubica.com)

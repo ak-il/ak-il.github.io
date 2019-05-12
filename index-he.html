@@ -1,7 +1,7 @@
 ---
 layout: default
 ref: index
-lang: English
+lang: עברית
 ---
 
 {% assign posts=site.posts | where:"lang", page.lang %}
@@ -15,7 +15,7 @@ lang: English
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">קרא עוד</a>
     </article>
   {% endfor %}
 </div>
