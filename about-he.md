@@ -3,7 +3,7 @@ layout: page
 title: אודות
 permalink: /about-he/
 ref: about
-lang: עברית
+lang: he
 ---
 
 TODO

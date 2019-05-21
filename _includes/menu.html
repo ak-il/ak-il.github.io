@@ -1,0 +1,3 @@
+{% for menu in site.t[page.lang].menus %}
+<a href="{{ site.baseurl }}{{menu[1].url}}">{{menu[1].title}}</a>
+{% endfor %}

@@ -2,7 +2,8 @@
 layout: post
 title: שלום עולם!
 ref: Hello World!
-lang: עברית
+lang: he
+tags: test2
 ---
 
 הפוסט הראשון שלי בבלוג.

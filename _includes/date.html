@@ -1,7 +1,7 @@
-{% if page.lang == 'English' %}
-    Written on {{ page.date | date: "%B %e, %Y" }}
+{% if page.lang == 'en' %}
+Written on {{ include.date | date: "%B %e, %Y" }}
 {% endif %}
 
-{% if page.lang == 'עברית' %}
-    נכתב ב-{{ page.date | date: "%d/%m/%Y" }}
+{% if page.lang == 'he' %}
+נכתב ב-{{ include.date | date: "%d/%m/%Y" }}
 {% endif %}

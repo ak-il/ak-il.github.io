@@ -1,9 +1,15 @@
-{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-{% for post in posts %}
-<a href="{{ post.url }}" class="{{ post.lang }}{% if page.lang==post.lang %} activeLang{% endif %}">{{ post.lang }}</a>
-{% endfor %}
-
-{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-{% for pagex in pages %}
-<a href="{{ pagex.url }}" class="{{ pagex.lang }}{% if page.lang==pagex.lang %} activeLang{% endif %}">{{ pagex.lang }}</a>
+{% for lang in site.languages %}
+{% if page.layout == 'post' %}
+{% assign other=site.posts | where: "ref", page.ref 
+                               | where: "lang", lang | first %}
+{% else %}
+{% assign other=site.pages | where: "ref", page.ref 
+                               | where: "lang", lang | first %}
+{% endif %}
+{% if other.url %}
+<a href="{{ other.url }}"
+    class="{{ post.lang }}{% if other.lang==page.lang %} activeLang{% endif %}">{{ site.t[lang].language-title }}</a>
+{% else %}
+<a href="#" class="{{ post.lang }} noTranslation">{{ site.t[lang].language-title }}</a>
+{% endif %}
 {% endfor %}

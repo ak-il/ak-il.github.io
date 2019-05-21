@@ -1,0 +1,37 @@
+{% if site.tags != "" %}
+  {% include collecttags.html %}
+{% endif %}
+
+<head>
+    <title>
+        {{ site.t[page.lang].name }}{% if page.title %} - {{ page.title }}{% endif %}
+    </title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    {% if page.lang=='he' %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style-rtl.css" />
+    {% endif %}
+    <link rel="alternate" type="application/rss+xml"
+        title="{{ site.t[page.lang].name }} - {{ site.t[page.lang].description }}"
+        href="{{ site.baseurl }}{{site.t[page.lang].feed-path}}" />
+
+    {% for lang in site.languages %}
+    {% if page.layout == 'post' %}
+    {% assign other=site.posts | where: "ref", page.ref
+                                       | where: "lang", lang | first %}
+    {% else %}
+    {% assign other=site.pages | where: "ref", page.ref
+                                       | where: "lang", lang | first %}
+    {% endif %}
+    {% if other and page.lang != other.lang %}
+    <link rel="alternate" hreflang="{{other.lang}}" href="{{other.url}}" />
+    {% endif %}
+    {% endfor %}
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>

@@ -2,46 +2,41 @@
 # This file contains configuration flags to customize your site
 #
 
-# Name of your site (displayed in the header)
-name:
-  English: Alex Kubica
-  עברית: אלכס קוביצה
-
-# Short bio or description (displayed in the header)
-description:
-  English: a bookworm beginner, addicted to fitness and future entrepreneur
-  עברית: תולעת ספרים מתחילה, מכור לכושר ויזם לעתיד
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://secure.gravatar.com/avatar/8ed571cc15c01b5e0c9185b27c84fa84
-
-index:
-  English: '/'
-  עברית: '/index-he'
-
-feed:
-  English: '/feed.xml'
-  עברית: '/feed-he.xml'
-
-menu:
-  blog:
-    English:
-      name: 'Blog'
-      url: '/'
-    עברית:
-      name: 'בלוג'
-      url: '/index-he'
-  about:
-    English:
-      name: 'About'
-      url: '/about'
-    עברית:
-      name: 'עליי'
-      url: '/about-he'
+languages: [en, he]
+t:
+  he:
+    language-title: עברית
+    name: אלכס קוביצה
+    description: תולעת ספרים מתחילה, מכור לכושר ויזם לעתיד
+    index-path: '/index-he'
+    feed-path: '/feed-he.xml'
+    menus:
+      blog:
+        title: 'בלוג'
+        url: '/index-he'
+      about:
+        title: 'עליי'
+        url: '/about-he'
+  en:
+    language-title: English
+    name: Alex Kubica
+    description: a bookworm beginner, addicted to fitness and future entrepreneur
+    index-path: '/'
+    feed-path: '/feed.xml'
+    menus:
+      blog:
+        title: 'Blog'
+        url: '/index'
+      about:
+        title: 'About'
+        url: '/about'
 
 #
 # Flags below are optional
 #
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://secure.gravatar.com/avatar/8ed571cc15c01b5e0c9185b27c84fa84
 
 # Includes an icon in the footer for each username you enter
 footer-links:

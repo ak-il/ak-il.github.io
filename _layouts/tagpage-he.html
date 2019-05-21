@@ -1,0 +1,18 @@
+---
+layout: default
+lang: he
+---
+<div class="post">
+  <h1>תגית: {{ page.tag }}</h1>
+  <ul>
+    {% assign posts = site.tags[page.tag] | where: "lang", "he" %}
+    {% for post in posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> ({% include date.html date=post.date %})<br>
+      {{ post.description }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<hr>
+
+{% include archive-he.html %}

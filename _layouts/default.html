@@ -1,50 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>
-    {{ site.name[page.lang] }}{% if page.title %} - {{ page.title }}{% endif %}
-  </title>
-
-  {% include meta.html %}
-
-  <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  {% if page.lang=='עברית' %}
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style-rtl.css" />
-  {% endif %}
-  <link rel="alternate" type="application/rss+xml"
-    title="{{ site.name[page.lang] }} - {{ site.description[page.lang] }}"
-    href="{{ site.baseurl }}{{site.feed[page.lang]}}" />
-  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-  {% for post in posts %}
-  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
-  {% endfor %}
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %}
-  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
-  {% endfor %}
-
-  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-</head>
+{% include head.html %}
 
 <body>
   <div id="main-container">
-    <div style="flex: 1" {% if page.lang=='עברית' %} dir="rtl" {% endif %}>
+    <div style="flex: 1" {% if page.lang=='he' %} dir="rtl" {% endif %}>
       <div class="wrapper-masthead">
         <div class="container">
           <header class="masthead clearfix">
-            <a href="{{site.index[page.lang]}}" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <a href="{{site.t[page.lang].index-path}}" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
             <div class="site-info">
-              <h1 class="site-name"><a href="{{site.index[page.lang]}}">{{ site.name[page.lang] }}</a></h1>
-              <p class="site-description">{{ site.description[page.lang] }}</p>
+              <h1 class="site-name"><a href="{{site.t[page.lang].index-path}}">{{ site.t[page.lang].name }}</a></h1>
+              <p class="site-description">{{ site.t[page.lang].description }}</p>
             </div>
+
             <nav>
-              <a href="{{ site.baseurl }}{{site.menu.blog[page.lang].url}}">{{site.menu.blog[page.lang].name}}</a>
-              <a href="{{ site.baseurl }}{{site.menu.about[page.lang].url}}">{{site.menu.about[page.lang].name}}</a>
+              {% include menu.html %}
               {% include languages.html %}
             </nav>
           </header>
