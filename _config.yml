@@ -7,7 +7,7 @@ t:
   he:
     language-title: עברית
     name: אלכס קוביצה
-    description: תולעת ספרים מתחילה, מכור לכושר ויזם לעתיד
+    description: חובב כושר, אוהב ספרים, בלוגר, משקיע ויזם עתידי.
     index-path: '/index-he'
     feed-path: '/feed-he.xml'
     menus:
@@ -20,7 +20,7 @@ t:
   en:
     language-title: English
     name: Alex Kubica
-    description: a bookworm beginner, addicted to fitness and future entrepreneur
+    description: Fitness enthusiast, bibliophile, blogger, investor and future entrepreneur.
     index-path: '/'
     feed-path: '/feed.xml'
     menus:

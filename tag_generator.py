@@ -53,7 +53,7 @@ if not os.path.exists(tag_dir):
 
 for tag in total_tags:
     tag_filename = tag_dir + tag + '.md'
-    f = open(tag_filename, 'a')
+    f = open(tag_filename, 'a', encoding="utf-8")
     write_str = '---\nlayout: tagpage\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\rlang: en\nref: ' + tag + '\nrobots: noindex\n---\n'
     f.write(write_str)
     f.close()
