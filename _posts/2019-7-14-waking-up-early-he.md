@@ -1,6 +1,6 @@
 ---
 layout: post
-title: השכמה מוקדמת ואיך מלחייה עוזרת לי בזה
+title: כיצד מלחייה עוזרת לי בהשכמה מוקדמת
 ref: Waking up early
 lang: he
 tags: personal tip productivity
